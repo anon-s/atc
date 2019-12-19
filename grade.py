@@ -21,22 +21,7 @@ def score_to_grade(grade_number: float) -> str:
     for key in grading_scheme:
         if grade_number > grading_scheme[key]:
             grade = key
-    return grade
-
-
-def score_to_grade2(grade_number: float) -> str:
-    grading_scheme = {'A': 6,
-                      'B': 5,
-                      'C': 4,
-                      'D': 3,
-                      'E': 2,
-                      'F': 1}
-    grade = 'Invalid'
-    for key in grading_scheme:
-        if grade_number > grading_scheme[key]:
-            if grade == 'Invalid':
-                grade = key
-        print(grade, key, "grade, key")
+            break
     return grade
 
 
