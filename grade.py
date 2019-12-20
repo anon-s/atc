@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
@@ -18,23 +20,9 @@ def score_to_grade(grade_number: float) -> str:
     grade = 'Invalid'
     for key in grading_scheme:
         if grade_number > grading_scheme[key]:
-            grade = key
-    return grade
-
-
-def score_to_grade2(grade_number: float) -> str:
-    grading_scheme = {'A': 6,
-                      'B': 5,
-                      'C': 4,
-                      'D': 3,
-                      'E': 2,
-                      'F': 1}
-    grade = 'Invalid'
-    for key in grading_scheme:
-        if grade_number > grading_scheme[key]:
             if grade == 'Invalid':
                 grade = key
-        print(grade, key, "grade, key")
+            break
     return grade
 
 
@@ -76,6 +64,18 @@ def welcome():
     print("Welcome to Zettai Ryouiki Calculator")
     print("The credit for the formula goes to /u/Ikarosswings on reddit. Made by Stiles-X")
 
+
+def test_grading():
+    score = 6.5
+    grade = score_to_grade(score)
+    if grade == 'A':
+        return True
+    else:
+        return True
+
+
 if __name__ == '__main__':
     welcome()
+    if test_grading() is False:
+        print("The grading is not functioning properly")
     question()
