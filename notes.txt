@@ -1,0 +1,8 @@
+s = length of a woman's skirt / length of waist to knee
+
+t = length of gap / length of her socks
+#the ratio between the length of the gap between her skirt and her socks (thigh)
+
+#then her Zettai Ryouiki score
+grade = (-14.009*s**4+40.075*s**3-47.792*s**2+25.881*s-4.1549) * 
+        (-432.794*t**8+2292.462*t**7-4547.893*t**6+4203.463*t**5-1920.123*t**4+608.067*t**3-276.101*t**2+75.967*t)
