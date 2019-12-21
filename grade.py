@@ -58,6 +58,7 @@ def question() -> None:
     print(" Ryouiki score is .....!")
     print(f"Number: {grade_number}")
     print(f"Grade : {grade}")
+    input("Waiting for you to enter a key to close...")
 
 
 def welcome():
